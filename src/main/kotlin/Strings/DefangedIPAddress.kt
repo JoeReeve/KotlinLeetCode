@@ -1,6 +1,7 @@
 package Strings
 
-class Solution {
+class DefangedIPAddress {
+
     fun defangIPaddr(address: String): String {
         val defanged = StringBuilder()
         for (letter in address) {

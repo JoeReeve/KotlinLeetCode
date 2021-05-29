@@ -1,6 +1,6 @@
 package Arrays
 
-class SolutionBuyAndSellStock {
+class BuyAndSellStock {
     fun maxProfit(prices: IntArray): Int {
 
         var low = Int.MAX_VALUE

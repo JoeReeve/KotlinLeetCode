@@ -1,6 +1,6 @@
 package Arrays
 
-class SolutionContainsDups {
+class ContainsDuplicates {
     fun containsDuplicate(nums: IntArray): Boolean {
         val map = mutableMapOf<Int, Int>()
         nums.forEach { num ->

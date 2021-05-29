@@ -1,6 +1,6 @@
 package Arrays
 
-class SolutionTwoSum {
+class TwoSum {
     fun twoSum(nums: IntArray, target: Int): IntArray {
         val map = mutableMapOf<Int, Int>()
 
