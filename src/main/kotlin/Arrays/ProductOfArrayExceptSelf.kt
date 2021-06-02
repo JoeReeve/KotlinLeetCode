@@ -60,7 +60,7 @@ class ProductOfArrayExceptSelf {
             answer.add(product)
             product = product * num
         }
-
+        
         product = 1
 
         //right to left this time (without reversing the list)
