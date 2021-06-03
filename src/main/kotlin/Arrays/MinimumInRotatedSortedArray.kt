@@ -1,0 +1,4 @@
+package Arrays
+
+class MinimumInRotatedSortedArray {
+}
