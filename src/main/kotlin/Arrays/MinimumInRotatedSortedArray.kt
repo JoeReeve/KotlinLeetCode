@@ -19,5 +19,5 @@ class MinimumInRotatedSortedArray {
         }
         return nums[left]
     }
-    
+
 }
