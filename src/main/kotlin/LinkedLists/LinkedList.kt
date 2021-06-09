@@ -1,6 +1,6 @@
-class LinkedListPractice(var head: Node? = null) {
+class LinkedList(var head: Node? = null) {
 
-    fun add(data: String) {
+    fun add(data: Int) {
         var newNode = Node(data)
         if (head == null) head = newNode
         else {
@@ -12,7 +12,7 @@ class LinkedListPractice(var head: Node? = null) {
         }
     }
 
-    fun get(index: Int): String {
+    fun get(index: Int): Int {
         var curr = head
         repeat(index) {
             curr = curr?.next
@@ -38,9 +38,9 @@ class LinkedListPractice(var head: Node? = null) {
         before?.next = before?.next?.next
     }
 
-    fun display(): List<String> {
+    fun display(): List<Int> {
         var curr = head
-        var list = mutableListOf<String>()
+        var list = mutableListOf<Int>()
         while (curr != null) {
             list.add(curr.data)
             curr = curr.next
@@ -64,13 +64,13 @@ class LinkedListPractice(var head: Node? = null) {
     fun hasCycle(head: Node?): Boolean {
         if (head == null) return false
         var slow:Node? = head
-        var fast:Node? = head?.next
+        var fast:Node? = head.next
 
         while(slow != fast) {
-            if (fast == null || fast?.next == null) return false
+            if (fast == null || fast.next == null) return false
 
             slow = slow?.next
-            fast = fast?.next?.next
+            fast = fast.next?.next
         }
         return true
     }
@@ -92,4 +92,4 @@ class LinkedListPractice(var head: Node? = null) {
     }
 }
 
-    data class Node(val data: String, var next: Node? = null)
+    data class Node(val data: Int, var next: Node? = null)
