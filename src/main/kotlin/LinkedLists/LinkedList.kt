@@ -60,6 +60,36 @@ class LinkedListPractice(var head: Node? = null) {
         }
         head = prev
     }
+
+    fun hasCycle(head: Node?): Boolean {
+        if (head == null) return false
+        var slow:Node? = head
+        var fast:Node? = head?.next
+
+        while(slow != fast) {
+            if (fast == null || fast?.next == null) return false
+
+            slow = slow?.next
+            fast = fast?.next?.next
+        }
+        return true
+    }
+
+    fun hasCycle2(head: Node?): Boolean {
+        var curr = head
+        var pos: Int = 0 //pos isn't necessary for the problem but
+                        // in a real world scenario it might be nice to have
+        var indices = mutableMapOf<Node?, Int>()
+
+        while (curr?.next != null) {
+            if (indices.containsKey(curr)) return true
+            indices.put(curr, pos) //again you could just put 0 in as the value
+                                  // for every node but its nice to have
+            pos++
+            curr = curr.next
+        }
+        return false
+    }
 }
 
     data class Node(val data: String, var next: Node? = null)
