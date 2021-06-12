@@ -38,6 +38,27 @@ class LinkedList(var head: Node? = null) {
         before?.next = before?.next?.next
     }
 
+    fun removeNthFromEnd(head: Node?, n: Int): Node? {
+        if (head?.next == null) return null
+
+        var curr = head
+        var count = 0
+        while(curr != null) {
+            count++
+            curr = curr.next
+        }
+
+        if(n == count) return head.next
+
+        curr = head
+
+        repeat(count - n -1) {
+            curr = curr?.next
+        }
+        curr?.next = curr?.next?.next
+        return head
+    }
+
     fun display(): List<Int> {
         var curr = head
         var list = mutableListOf<Int>()
