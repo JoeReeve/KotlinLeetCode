@@ -4,6 +4,11 @@ import Node
 
 class ReorderList {
 
+    /**
+     * This class will take in a list and then reorder it so that L0 -> l1 -> lN-1 ->lN
+     * becomes L0 -> LN -> L1 - LN-1 ...
+     */
+
     fun reorderList(head: Node?) {
         if (head == null || head.next == null) return
         val l1: Node = head
