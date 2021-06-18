@@ -40,5 +40,5 @@ class MinimumWindowSubstring {
 
         return minString
     }
-    
+
 }
