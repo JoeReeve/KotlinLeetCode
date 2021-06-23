@@ -3,7 +3,7 @@ package Strings
 //This question becomes pretty simple if you just sort each word and then store it in a map. If a sorted version of our
 // word is already in the map then we know its an anagram and add it to the appropriate list in our map. If it's not
 // then we create a new key to check future words against and keep looking.
-class Solution {
+class GroupAnagrams {
     fun groupAnagrams(strs: Array<String>): List<List<String>> {
 
         if (strs.isEmpty()) return mutableListOf<List<String>>(listOf(""))
