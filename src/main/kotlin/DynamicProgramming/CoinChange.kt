@@ -27,7 +27,7 @@ class CoinChange {
             }
         }
         //finally if our dp[amount] is greater than the actual amount,
-        //no combinations of coins was found and we return -1
+        //no combinations of coins were found and we return -1
         return if (dp[amount] <= amount) dp[amount] else -1
     }
 }
