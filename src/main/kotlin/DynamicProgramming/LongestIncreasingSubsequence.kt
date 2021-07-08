@@ -12,7 +12,7 @@ class LongestIncreasingSubsequence {
                 //first we check to make sure our current number is greater than the previous one, then we check to see
                     //if adding it increases our longest subsequence found so far
                 if (nums[i] > nums[j] && dp[j] + 1 > dp[i]) {
-                    //if those cases our true then we append the current longest subsequence with the current number
+                    //if those cases are true then we append the current longest subsequence with our current number
                     dp[i] = dp[j] + 1
                 }
             }

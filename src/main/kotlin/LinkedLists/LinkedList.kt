@@ -113,4 +113,7 @@ class LinkedList(var head: Node? = null) {
     }
 }
 
-    data class Node(val data: Int, var next: Node? = null)
+    data class Node(
+        val data: Int,
+        var next: Node? = null
+    )
