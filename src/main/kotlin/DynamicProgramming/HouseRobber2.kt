@@ -22,5 +22,5 @@ class HouseRobber2 {
         }
         return dp.last()
     }
-    
+
 }
