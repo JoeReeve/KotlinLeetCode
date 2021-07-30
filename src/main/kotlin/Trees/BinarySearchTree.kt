@@ -1,5 +1,6 @@
 package Trees
 
+import com.sun.source.tree.Tree
 import java.util.*
 
 class BinarySearchTree(var root: TreeNode) {
@@ -64,6 +65,27 @@ class BinarySearchTree(var root: TreeNode) {
         if (curr.right != null) queue.add(curr.right!!)
 
         return breadthFirstSearchR(queue, list)
+    }
+
+    fun DFSPreOrder(node: TreeNode, list: MutableList<Int>): List<Int> {
+        list.add(node.`val`)
+        if (node.left != null) DFSInOrder(node.left!!, list)
+        if (node.right != null) DFSInOrder(node.right!!, list)
+        return list
+    }
+
+    fun DFSInOrder(node: TreeNode, list: MutableList<Int>): List<Int> {
+        if (node.left != null) DFSInOrder(node.left!!, list)
+        list.add(node.`val`)
+        if (node.right != null) DFSInOrder(node.right!!, list)
+        return list
+    }
+
+    fun DFSPostOrder(node: TreeNode, list: MutableList<Int>): List<Int> {
+        if (node.left != null) DFSInOrder(node.left!!, list)
+        if (node.right != null) DFSInOrder(node.right!!, list)
+        list.add(node.`val`)
+        return list
     }
 
 }
