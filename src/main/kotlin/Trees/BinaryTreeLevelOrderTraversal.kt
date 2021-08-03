@@ -8,12 +8,12 @@ class BinaryTreeLevelOrderTraversal {
         if (root == null) return mutableListOf<List<Int>>()
         val bigList = mutableListOf<List<Int>>()
         val queue = LinkedList<TreeNode>()
-        queue.add(root!!)
+        queue.add(root)
 
         while (queue.size != 0) {
-            var smallList = mutableListOf<Int>()
+            val smallList = mutableListOf<Int>()
             for (i in 1..queue.size) {
-                var curr = queue.removeFirst()
+                val curr = queue.removeFirst()
                 smallList.add(curr!!.`val`)
                 if (curr.left != null) queue.add(curr.left!!)
                 if (curr.right != null) queue.add(curr.right!!)
