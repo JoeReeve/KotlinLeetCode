@@ -11,5 +11,5 @@ class ValidateBST {
         else if (root.`val` >= max || root.`val` <= min) return false
         else return validate(root.left, root.`val`.toLong(), min) && validate(root.right, max, root.`val`.toLong())
     }
-    
+
 }
