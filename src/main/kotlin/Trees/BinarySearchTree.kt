@@ -24,7 +24,6 @@ class BinarySearchTree(var root: TreeNode) {
     }
     
     fun interativeSearch(value: Int):TreeNode? {
-        if (root == null) return null
         var curr = root
         while (curr != null) {
             if (value < curr.`val`) curr = curr.left!!
