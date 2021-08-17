@@ -1,14 +1,14 @@
 package Trees
 
 class TrieNode2 {
-    val children = mutableMapOf<Char, TrieNode>()
+    val children = mutableMapOf<Char, TrieNode2>()
     var isWord = false
 
-    fun add(word:String, node: TrieNode) {
+    fun add(word:String, node: TrieNode2) {
         var curr = node
 
         word.forEach {char ->
-            if (!curr.children.containsKey(char)) curr.children[char] = TrieNode()
+            if (!curr.children.containsKey(char)) curr.children[char] = TrieNode2()
             curr = curr.children[char]!!
         }
         curr.isWord = true
@@ -18,7 +18,7 @@ class TrieNode2 {
 
 class Solution {
     fun findWords(board: Array<CharArray>, words: Array<String>): List<String> {
-        val root = TrieNode()
+        val root = TrieNode2()
 
         words.forEach{ word ->
             root.add(word, root)
@@ -29,7 +29,7 @@ class Solution {
         val results = mutableSetOf<String>()
         val visited = mutableSetOf<Pair<Int,Int>>()
 
-        fun dfs(r: Int, c: Int, node: TrieNode, word: String) {
+        fun dfs(r: Int, c: Int, node: TrieNode2, word: String) {
             var curr = node
             var word = word
             if (r < 0 || c < 0 || r == rows || c == cols || !node.children.containsKey(board[r][c]) || visited.contains(Pair(r,c))) {
