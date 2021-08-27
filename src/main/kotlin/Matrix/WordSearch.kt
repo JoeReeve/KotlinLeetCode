@@ -25,5 +25,5 @@ class WordSearch {
         board[i][j] = temp
         return found
     }
-    
+
 }
