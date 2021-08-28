@@ -25,5 +25,5 @@ class InsertInterval {
         result.add(newInterval)
         return result.toTypedArray()
     }
-    
+
 }
