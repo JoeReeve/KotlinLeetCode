@@ -1,0 +1,4 @@
+package Intervals
+
+class NonOverlappingIntervals {
+}
