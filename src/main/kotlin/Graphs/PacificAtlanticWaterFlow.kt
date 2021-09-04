@@ -38,5 +38,5 @@ class PacificAtlanticWaterFlow {
         }
         return both
     }
-    
+
 }
